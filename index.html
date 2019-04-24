@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Mapping Awakening">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="favs/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favs/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favs/favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
   <style>
   :root {
     --purp-deep: #280664;
@@ -19,7 +24,7 @@
     align-items: center;
   }
   .abscen {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -51,10 +56,10 @@
   <title>Atmanautica</title>
 </head>
 <body>
-  <div class="abscen" id="waves"></div>
   <div class="abscen" id="rocketdrop"></div>
   <h1>Atmanautica</h1>
   <h2>Mapping Awakening</h2>
+  <div class="abscen" id="waves"></div>
   <script src="three.r92.min.js"></script>
   <script src="vanta.waves.min.js"></script>
   <script>
