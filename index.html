@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Mapping Awakening">
+  <style>
+  :root {
+    --purp-deep: #280664;
+    --purp: #5d17d9;
+    --blue: #1695c5;
+  }
+  body {
+    background-color: var(--purp-deep);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .abscen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  #waves {
+    z-index: -1;
+  }
+  h1, h2 {
+    text-indent: -9999px;
+  }
+  #rocketdrop {
+    background-image: url("./logo.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    max-height: 720px;
+    min-height: 300px;
+    min-width: 300px;
+    max-width: 720px;
+    height: 61vh;
+    width: 61vw;
+    z-index: 1;
+  }
+  </style>
+  <title>Atmanautica</title>
+</head>
+<body>
+  <div class="abscen" id="waves"></div>
+  <div class="abscen" id="rocketdrop"></div>
+  <h1>Atmanautica</h1>
+  <h2>Mapping Awakening</h2>
+  <script src="three.r92.min.js"></script>
+  <script src="vanta.waves.min.js"></script>
+  <script>
+    VANTA.WAVES({
+      el: "#waves",
+      color: 0x280664,
+      shininess: 32.00,
+      waveHeight: 10.00,
+      waveSpeed: 0.90,
+      zoom: 1
+    })
+  </script>
+</body>
+</html>
