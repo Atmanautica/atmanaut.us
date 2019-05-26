@@ -16,9 +16,11 @@
     --purp-deep: #280664;
     --purp: #5d17d9;
     --blue: #1695c5;
+    --white: #f9f0ff;
   }
   body {
     background-color: var(--purp-deep);
+    color: var(--white);
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -37,8 +39,11 @@
   #waves {
     z-index: -1;
   }
-  h1, h2 {
+  h1 {
     text-indent: -9999px;
+  }
+  h1, h2 {
+    font-family: "Righteous", "Lato", sans-serif;
   }
   #rocketdrop {
     background-image: url("./logo.png");
@@ -59,7 +64,7 @@
 <body>
   <div class="abscen" id="rocketdrop"></div>
   <h1>Atmanautica</h1>
-  <h2>Mapping Awakening</h2>
+  <h2>Sherpas for Awakening</h2>
   <div class="abscen" id="waves"></div>
   <script src="three.r92.min.js"></script>
   <script src="vanta.waves.min.js"></script>
