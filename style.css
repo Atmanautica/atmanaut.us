@@ -4,6 +4,8 @@
   --purp-deep: #280664;
   --purp: #5d17d9;
   --white: #e9e6f9;
+  --glass: hsla(162, 70%, 90%, 0.8);
+  --muted: hsla(82, 10%, 50%, 0.5);
 }
 
 body {
@@ -57,12 +59,12 @@ h2,
 }
 
 h3 {
-  margin: 0.5em;
+  margin: 0.5em 0;
 }
 
 #rocketdrop {
   background-image: url("./logo.png");
-  background-position: center center;
+  background-position: 100% center;
   background-repeat: no-repeat;
   background-size: contain;
   height: 61vh;
@@ -76,13 +78,13 @@ h3 {
 
 .shadow-realm {
   background-image:
-    linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.2) 10%,
-      rgba(0, 0, 0, 0.4) 30%
-    );
-  margin-top: 82vh;
+  linear-gradient(
+  to bottom,
+  rgba(0, 0, 0, 0) 0%,
+  rgba(0, 0, 0, 0.2) 10%,
+  rgba(0, 0, 0, 0.4) 30%
+  );
+  margin-top: 85vh;
   padding-bottom: 10rem;
   width: 100%;
   z-index: 2;
@@ -92,7 +94,12 @@ h3 {
   max-width: 80ch;
   min-width: 320px;
   margin: 2rem auto 0;
-  width: 60%;
+  width: 61vw;
+}
+
+hr.break {
+  margin: 3rem;
+  background: var(--white);
 }
 
 .resources {
@@ -104,3 +111,140 @@ h3 {
 .resources h3 {
   margin-left: -1rem;
 }
+
+/* CSS only Accordion
+ * https://codepen.io/vinsongrant/pen/qbGKed */
+.fold {
+  position: relative;
+}
+
+.toggle {
+  display: none;
+}
+
+.moar,
+.fold-list {
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  background: var(--glass);
+  display: block;
+  color: var(--purp-deep);
+}
+
+.moar {
+  padding: 1em;
+  font-weight: bold;
+  cursor: ns-resize;
+}
+
+.moar:before,
+.moar:after {
+  content: '';
+  position: absolute;
+  right: 1.25em;
+  top: 1.25em;
+  width: 2px;
+  height: 0.75em;
+  background-color: var(--purp);
+  transition: all 0.25s;
+}
+
+.moar:after {
+  transform: rotate(90deg);
+}
+
+.fold-list {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1em 0 2em;
+  margin-top: 0;
+}
+
+.toggle:checked + .moar + .fold-list {
+  max-height: 100vh;
+}
+
+.toggle:checked + .moar:before {
+  transform: rotate(90deg) !important;
+}
+/* END CSS only Accordion */
+
+#formbutton-container {
+  opacity: 0;
+  transition: opacity 500ms;
+  pointer-events: none;
+}
+
+#formbutton-container.shown {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* form fields */
+::placeholder {
+  color: var(--muted);
+}
+
+.contact p,
+.contact .field {
+  padding-left: 1rem;
+}
+
+.field {
+  text-align: left;
+  flex: 1;
+  width: 40ch;
+  max-width: 61vw;
+}
+
+.field + .field {
+  margin-top: 1em;
+}
+
+.field label {
+  font-size: 87.5%;
+}
+
+.field input[type="email"],
+.field textarea {
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.5rem;
+  border: 4px solid var(--purp);
+  border-radius: 0.5rem;
+  color: var(--purp-deep);
+  background: var(--glass);
+  font-size: 1rem;
+  font-family: "Aleo", serif;
+  transition: all 250ms ease-in-out;
+}
+
+.field input[type="email"]:hover,
+.field textarea:hover {
+  background: var(--white);
+}
+
+.field input[type="email"]:active,
+.field input[type="email"]:focus,
+.field textarea:active,
+.field textarea:focus {
+  background: var(--white);
+}
+
+a.btn, .btn { display: inline-block; padding: 0.75em 1.5em; margin: 0.5em; text-decoration: none; white-space: nowrap; outline: none; color: #fafafa; background: #26a9d9; border-color: #26a9d9; border-width: 6px; border-style: solid; border-radius: 1em; font-family: "Lato", system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-weight: bolder; cursor: pointer; text-align: center; transition: background 250ms ease-in-out, transform 150ms ease; -webkit-appearance: none; -moz-appearance: none; box-shadow: inset 0 0 1em 1em rgba(0, 0, 0, 0.25); }
+
+a.btn:hover, a.btn:focus, .btn:hover, .btn:focus { background: #42c1f0; }
+
+a.btn:focus, .btn:focus { outline: 1px solid rgba(255, 255, 255, 0.2); outline-offset: 4px; }
+
+a.btn:active, .btn:active { transform: scale(0.97); background: #1697c5; }
+
+a.btn:link, a.btn:focus, a.btn:hover, a.btn:active, a.btn:visited, a.btn:visited:hover, .btn:link, .btn:focus, .btn:hover, .btn:active, .btn:visited, .btn:visited:hover { color: #fafafa; }
+
+@media screen and (min-width: 60rem) { .btn.lg { font-size: 1.25em; } }
+
+.btn.sm { font-size: 0.875em; padding: 0.25em; border-width: 2px; border-radius: 4px; margin: 0; }
+
+.btn.center { display: block; margin: 1rem auto 0.5rem; }
