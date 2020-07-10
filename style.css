@@ -167,6 +167,10 @@ hr.break {
   margin-bottom: 1em;
 }
 
+.fold-list a:last-child {
+  text-decoration: none;
+}
+
 .toggle:checked + .moar + .fold-list {
   max-height: 80vh;
 }
