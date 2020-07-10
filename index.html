@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Sherpas for the Awakening">
+    <title>Atmanautica</title>
+    <meta name="description" content="Awakening Sherpas">
     <meta name="theme-color" content="#280664">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="favs/apple-touch-icon.png">
@@ -12,18 +13,24 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favs/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     <link href="https://fonts.googleapis.com/css?family=Lato|Aleo|Righteous" rel="stylesheet">
-    <title>Atmanautica</title>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
 
+  <body>
     <section class="shadow-realm">
       <article class="content-pillar">
 
         <h1>Atmanautica</h1>
-
-        <p>Remembering ourself can be especially tricky when we do not
-          remember that we have forgotten anything.</p>
+        <figure>
+          <blockquote>What does that mean,
+            to take the body seriously
+            is to admit one can suffer?
+            I suffer because I'm a body;
+            if I weren't a body,
+            how could I suffer?
+          </blockquote>
+          <figcaption>Lao Tzu, Tao Te Ching #13</figcaption>
+        </figure>
 
         <div class="resources">
           <h3>If you find yourself…</h3>
@@ -54,15 +61,15 @@
             <label for="moar2" class="moar">Our resources include:</label>
             <ul class="fold-list">
               <em><small>in no particular order</small></em>
-              <li><a href="https://www.youtube.com/channel/UChba0vNERFwUtoxlZ6AjrMw">Marshall Rosenberg's</a> Nonviolent Communication <a
-                href="https://www.wikiwand.com/en/Nonviolent_Communication">🔗</a></li>
+              <li><a href="https://www.youtube.com/channel/UChba0vNERFwUtoxlZ6AjrMw">Marshall Rosenberg's</a> Nonviolent Communication 
+                <a class="glyph" href="https://www.wikiwand.com/en/Nonviolent_Communication">🔗</a></li>
 	            <li><a href="http://integratedinformationtheory.org/">Giulio
                     Tononi's Integrated information Theory</a> <a
-                href="https://www.wikiwand.com/en/Integrated_information_theory">🔗</a></li>
+                class="glyph" href="https://www.wikiwand.com/en/Integrated_information_theory">🔗</a></li>
               <li><a href="https://www.my-big-toe.com/">Thomas Campbell's Big
                   Theory of Everything </a></li>
               <li>Madame H. P. Blavatsky's <a href="https://www.theosociety.org/pasadena/key/key-hp.htm">Key to Theosophy</a> <a
-                href="https://www.wikiwand.com/en/The_Key_to_Theosophy">🔗</a></li>
+                class="glyph" href="https://www.wikiwand.com/en/The_Key_to_Theosophy">🔗</a></li>
               <li>Bucky Fuller's <a
                   href="https://www.wikiwand.com/en/Dymaxion">Dymaxion</a>
                 &amp; <a href="https://www.wikiwand.com/Spaceship_Earth">Spaceship Earth</a></li>
@@ -110,26 +117,28 @@
         </div>
 
         <div class="resources">
-          <h3>We tailor our path adjustments to each client.</h3>
+          <h3>We tailor the set(ting) and path adjustments to the healer.</h3>
           <div class="fold">
             <input type="checkbox" id="moar3" class="toggle" />
             <label for="moar3" class="moar">Some of our methods and tools:</label>
             <ul class="fold-list">
-              <li>Acceptance training</li>
-              <li>Nonviolent Communication</li>
-              <li>Plant medicine ceremenonies</li>
-              <li>Energy-channeling bodywork/healing</li>
-              <li>Self-expression/improvisation sessions</li>
               <li>Ego sheds/peels/purges/reboots</li>
-              <li>Tarot and I Ching divinations</li>
-              <li>Pauseforest interviews</li>
-              <li>Automatic writing</li>
-              <li>Radical Honesty</li>
+              <li>Energy-channeling bodywork</li>
+              <li>Plant medicine ceremenonies</li>
+              <li>Tarot, I Ching, Archetypes</li>
+              <li>Conscious Loving games</li>
+              <li>Acceptance affirmation</li>
+              <li>Radical Honesty rounds</li>
+              <li>Pauseforest bathing</li>
+              <li>Ecstatic dance</li>
+              <li>Freewriting</li>
+              <li>NVC improv</li>
             </ul>
           </div>
         </div>
 
         <hr class="break">
+
         <div class="contact">
           <h3>We are now gathering Sherpas, designing Set(ting)s, practicing
             rituals, and weaving ceremonies.</h3>
@@ -151,72 +160,18 @@
             <div class="field">
               <button type="submit" class="btn lg">Make Contact</button>
             </div>
-
           </form>
         </div>
-
       </article>
     </section>
+
     <div class="abscen" id="rocketdrop"></div>
     <div class="abscen" id="waves"></div>
-    <script src="three.r92.min.js"></script>
-    <script src="vanta.waves.min.js"></script>
-    <script>
-      VANTA.WAVES({
-        el: "#waves",
-        color: 0x280664,
-        shininess: 32.00,
-        waveHeight: 10.00,
-        waveSpeed: 0.90,
-        zoom: 1
-      })
-    </script>
-    <!-- See more examples of how to use Formbutton at formspree.io/formbutton/docs -->
+
+    <script src="three.r92.min.js" defer></script>
+    <script src="vanta.waves.min.js" defer></script>
     <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
-    <script>
-      window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
-      formbutton("create", {
-        action: "https://formspree.io/mgenlrlw",
-        title: "Make contact",
-        description: "Now seeking dreamers, healers, and testers",
-        fields: [{
-          name: "Email",
-          type: "email",
-          label: "Your email",
-          required: true
-        }, {
-          name: "Message",
-          type: "textarea",
-        }, {
-          type: "submit",
-        }],
-        styles: {
-          fontFamily: '"Lato", sans-serif',
-          title: {
-            background: "#5d17d9"
-          },
-          description: {
-            background: "#1695c5",
-            padding: "16px 40px 16px 16px",
-          },
-          button: {
-            background: "#1695c5"
-          }
-        },
-      });
-    </script>
-    <script>
-      window.addEventListener("DOMContentLoaded", function(){
-        window.addEventListener("scroll", function fadeInFormbutton() {
-          var fbc = document.getElementById("formbutton-container");
-          if (window.pageYOffset >= 240) {
-            if (typeof fbc !== "undefined") {
-              fbc.classList.add("shown");
-              window.removeEventListener("scroll", fadeInFormbutton);
-            }
-          }
-        })
-      })
-    </script>
+    <script src="page.js" defer></script>
+
   </body>
 </html>

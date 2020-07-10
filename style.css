@@ -1,10 +1,11 @@
 :root {
-  --blue-light: #2296c3;
+  --blue-lite: #2296c3;
   --blue: #1695c5;
   --purp-deep: #280664;
   --purp: #5d17d9;
+  --purp-lite: hsl(262, 80%, 60%);
   --white: #e9e6f9;
-  --glass: hsla(162, 70%, 90%, 0.8);
+  --glass: hsla(162, 50%, 95%, 0.75);
   --muted: hsla(82, 10%, 50%, 0.5);
 }
 
@@ -30,8 +31,16 @@ a {
   color: var(--blue);
 }
 
+a:hover {
+  color: var(--blue-lite);
+}
+
 a:visited {
-  color: var(--purp);
+  color: var(--purp-lite);
+}
+
+a:visited:hover {
+  color: var(--blue);
 }
 
 .abscen {
@@ -69,7 +78,7 @@ h3 {
 }
 
 #rocketdrop {
-  background-image: url("./logo.png");
+  background-image: url("./bloo050.png");
   background-position: 100% center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -167,7 +176,7 @@ hr.break {
   margin-bottom: 1em;
 }
 
-.fold-list a:last-child {
+.fold-list a.glyph {
   text-decoration: none;
 }
 
@@ -180,17 +189,24 @@ hr.break {
 }
 /* END CSS only Accordion */
 
+#waves,
 #formbutton-container {
   opacity: 0;
   transition: opacity 500ms;
+}
+
+#formbutton-container {
   pointer-events: none;
 }
 
 #formbutton-container.shown {
-  opacity: 1;
   pointer-events: auto;
 }
 
+#waves.shown,
+#formbutton-container.shown {
+  opacity: 1;
+}
 
 /* form fields */
 ::placeholder {
@@ -252,3 +268,27 @@ a.btn:link, a.btn:focus, a.btn:hover, a.btn:active, a.btn:visited, a.btn:visited
 .btn.sm { font-size: 0.875em; padding: 0.25em; border-width: 2px; border-radius: 4px; margin: 0; }
 
 .btn.center { display: block; margin: 1rem auto 0.5rem; }
+
+figure {
+  margin: 1rem 0;
+}
+
+figcaption {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 0.875em;
+  padding-left: 5rem;
+}
+
+figcaption:before {
+  content: "—";
+}
+
+blockquote {
+  white-space: pre-line;
+  font-size: 1.25em;
+  font-family: "Aleo", serif;
+  margin: 0;
+  padding: 0 2rem 1rem 1rem;
+}
+
