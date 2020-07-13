@@ -99,10 +99,17 @@ h3 {
   rgba(0, 0, 0, 0.2) 10%,
   rgba(0, 0, 0, 0.4) 30%
   );
-  margin-top: 85vh;
+  margin-top: 79vh;
   padding-bottom: 10rem;
+  position: relative;
   width: 100%;
   z-index: 2;
+}
+
+@media screen and (min-width: 480px) {
+  .shadow-realm {
+    margin-top: 84vh;
+  }
 }
 
 .content-pillar {
@@ -285,10 +292,52 @@ figcaption:before {
 }
 
 blockquote {
-  white-space: pre-line;
-  font-size: 1.25em;
   font-family: "Aleo", serif;
+  font-size: 1.25em;
   margin: 0;
   padding: 0 2rem 1rem 1rem;
+  white-space: pre-line;
 }
 
+footer {
+  background: var(--purp-deep);
+  border-radius: 1em;
+  bottom: 1.5rem;
+  color: var(--white);
+  left: 0;
+  margin: auto;
+  padding: 0.5em;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 61vw;
+}
+
+footer .row,
+footer .row li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.row li {
+  display: inline-block;
+  margin: 0 1em;
+}
+
+.row a,
+.row span {
+  color: var(--white);
+  display: block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+}
+
+.row a:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.copyleft {
+  transform: rotateY(180deg);
+}
