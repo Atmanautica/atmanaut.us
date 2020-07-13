@@ -325,8 +325,7 @@ footer .row li {
   margin: 0 1em;
 }
 
-.row a,
-.row span {
+.row a {
   color: var(--white);
   display: block;
   padding: 0.25em 0.5em;
