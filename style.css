@@ -27,20 +27,24 @@ body {
   margin: 0;
 }
 
-a {
+a:link {
   color: var(--blue);
 }
 
-a:hover {
+a:link:hover {
   color: var(--blue-lite);
 }
 
 a:visited {
-  color: var(--purp-lite);
+  color: var(--purp);
 }
 
 a:visited:hover {
-  color: var(--blue);
+  color: var(--purp-lite);
+}
+
+a:active {
+  color: var(--purp);
 }
 
 .abscen {
